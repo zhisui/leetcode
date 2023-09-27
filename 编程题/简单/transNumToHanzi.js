@@ -15,9 +15,6 @@ function transNumToHanzi(num) {
         const numIndex = strArr[numKey]
          result = arr1[numIndex] + arr2[i] + result
     }
-
-
-
     result = result.replace(/零(千|百|十)/g, '零').replace(/十零/g, '十');
     // //合并中间多个零为一个零
     // result = result.replace(/零+/g, '零');
@@ -27,8 +24,6 @@ function transNumToHanzi(num) {
     // result = result.replace(/亿万/g, '亿');
     //移除末尾的零
     result = result.replace(/零+$/, '')
-    // //将【零一十】换成【零十】
-    // //result = result.replace(/零一十/g, '零十');//貌似正规读法是零一十
     // //将【一十】换成【十】
     // result = result.replace(/^一十/g, '十');
     // console.log(result,'result');
